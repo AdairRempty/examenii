@@ -1,0 +1,72 @@
+EXAMEN II
+
+Fundamentos de Desarrollo Móvil
+
+http://nrweb.com.mx/prueba_ws/libros.php
+
+Deben de usar la api que se les proporcionó y seguir las siguientes instrucciones:
+
+Al iniciar la aplicación debe de mostrar 3 widgets:
+Su nombre completo y visiblemente.
+Un mensaje que diga exactamente: “No hay datos que mostrar, da clic en el botón para cargar la información”.
+El botón o alguna forma de llamar a la api.
+Cada vez que se presione el botón para llamar a la api, se debe de eliminar los datos anteriores y guardar los nuevos valores, para después mostrarlos desde la BD.
+La respuesta de la api contiene estatus y mensajes, los cuales deben de mostrar y realizar las acciones que vienen en dicho texto, ej. “estatus”: 300, “mensaje”: “Solo mostrar el título” (Nivel 1).
+Se debe de guardar los datos que diga en la etiqueta “accion_principal” (Nivel 2).
+Unir todos los pedazos de historia para generar un solo texto.
+En la misma respuesta, contiene instrucciones como color y tamaño del texto, los cuales deben de aplicar a cada pedazo de historia (Nivel 3).
+También contiene acciones de editar y eliminar cada historia, pueden mostrar iconos para cada acción o textbutton (Nivel 4).
+
+Notas:
+
+
+Se debe de usar SQLite, hive para guardar la información, en cuyo caso que no se use, se debe de especificar claramente que se usó para la creación de BD y el porqué.
+Pueden realizar el examen y todas las acciones sin el uso de la BD, es decir con una variable o con listas, arreglos, etc., pero al realizarlo así tendrá un valor mucho menor el examen.
+Si no se muestra su nombre completo, no se tomará en cuenta su examen.
+El diseño para mostrar la información es totalmente libre.
+
+
+
+
+
+Repositorio del examen:  https://classroom.github.com/a/QeX4Nqql
+
+
+
+Día de entrega martes 04 de noviembre a las 11:59 pm
+
+{
+  "estatus": 200, 400, 500
+  "mensaje": "ok", “Error, no mostrar ni guardar información”, “Error, mostrar y guardar información pero ignorar instrucciones y acciones”,
+  "accion_principal": "Guardar solo impares", "Guardar solo pares", "No guardar nada",
+  "libro": [
+    {
+      "nom_libro": "Libro 85",
+      "cantidad_hojas": 312,
+      "autor": "Isabel Allende",
+      "capitulos": [
+        {
+          "historia": [
+            "The sun was bright and the wind danced on the river.",
+            "Suddenly the silence broke with the echo of footsteps.",
+            "An unexpected visitor appeared at the door that afternoon.",
+            “....”
+          ],
+          "personaje": "Pedro",
+          "instrucciones": {
+            "font_size": 16,
+            "color": "#0000ff",
+            "acciones": {
+              "editable": "no",
+              "eliminar": "si"
+            }
+          }
+        },
+        { … },
+      ]
+    },
+    { … },
+  ]
+}
+
+
